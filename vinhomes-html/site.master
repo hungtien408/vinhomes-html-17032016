@@ -1,0 +1,225 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/site.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.main.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <style type="text/css">
+            .corner
+            { 
+                position: relative; behavior: url(PIE.htc); 
+            }
+        </style>
+        <script type="text/javascript" src="assets/js/html5shiv.js"></script>
+        <script src="assets/js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lte IE 7]>
+	    <script src="assets/js/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <!--#wrapper-in use panel type 2-->
+        <div id="wrapper-in">
+            <div id="header">
+                <div class="header-top">
+                    <div class="wrapper-main">
+                        <div class="header-left">
+                            <div class="wrapper-logo">
+                                <div id="logo">
+                                    <a href="~/" runat="server">
+                                        <img class="img-responsive" src="assets/images/logo.png" alt="logo" /></a></div>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div id="language">
+                                <a href="#">
+                                    <img src="assets/images/flag-vn.png" alt="" /></a> <a href="#">
+                                        <img src="assets/images/flag-en.png" alt="" /></a>
+                            </div>
+                            <div id="hotline" class="desktop-showhide">
+                                <img src="assets/images/hotline.png" alt="" />
+                                <%--<div class="phone">
+                                        <span>Hotline</span><strong>0907 857 856</strong></div>--%>
+                            </div>
+                        </div>
+                        <div class="clr">
+                        </div>
+                    </div>
+                </div>
+                <%--<div id="header-menu">
+                    <div class="container-in">
+                        <div class="wrapper-main">
+                            <div class="button-menu mobile-showhide">
+                                <a class="panel-left" href="#menumobile" data-position="true" data-type="false"><span
+                                    class="icon-bar">bar</span> <span class="icon-bar">bar</span> <span class="icon-bar">
+                                        bar</span> </a>
+                            </div>
+                            <div id="hotline-mo" class="mobile-showhide">
+                                <span>Hotline <strong>0907 857 856</strong></span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>--%>
+                <ul id="menu" class="desktop-show">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Giới thiệu<span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <ul class="menu-sub">
+                            <li><a href="dich-vu.aspx"><span class="glyphicon glyphicon-chevron-right"></span>xét
+                                nghiệm y khoa</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>khám sức khỏe
+                                định kỳ công ty</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>khám &amp; điều
+                                trị bệnh chuyên khoa</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>khám bảo hiểm
+                                nhân thọ</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>lấy máu xét nghiệm
+                                tại nhà</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Dự án</a>
+                        <ul class="menu-sub">
+                            <li><a href="cac-chuyen-khoa.aspx"><span class="glyphicon glyphicon-chevron-right"></span>
+                                Nội Tổng Quát</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Nội Tim Mạch</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Tai Mũi Họng</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Răng Hàm Mặt</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Xét Nghiệm</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Chuẩn Đoán Hình
+                                Ảnh</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Sản Phụ Khoa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clr">
+                </div>
+            </div>
+            <div id="mainContent">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!--footer-->
+            <div id="footer">
+                <div class="container">
+                    <h2>
+                        Medical Diag Center
+                    </h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="footer-box">
+                                <p>
+                                    Cơ sở 1: 146 An Bình, Phường 7, Quận 5, Tp. HCM</p>
+                                <p>
+                                    ĐT: (84.8) 8381 551 - Fax: (84.8) 8381 554</p>
+                                <p>
+                                    Email: <a href="mailto:labgroupint@hcm.vnn.vn">labgroupint@hcm.vnn.vn</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer-box">
+                                <p>
+                                    Cơ sở 2: 75 Phạm Viết Chánh, P. Nguyễn Cư Trinh, Q. 1, Tp. HCM</p>
+                                <p>
+                                    ĐT: (84.8) 39255 610</p>
+                                <p>
+                                    Email: <a href="mailto:info@diag-center.com">info@diag-center.com</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="footer-box text-right">
+                                <p>
+                                    &copy; Copyright 2015 - Medical Diag Center. Allright reserved</p>
+                                <p>
+                                    <a href="http://wwww.tranlegroup.com" target="_blank">Website</a> <a href="http://wwww.tranlegroup.com"
+                                        target="_blank">by Tran Le</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end footer-->
+        </div>
+        <!--menumobile-->
+        <div id="menumobile" class="mobile-panel mobilep-left">
+            <div class="close-menu">
+                <a href="#menumobile" class="glyphicon glyphicon-remove-circle"></a>
+            </div>
+            <div class="menu-in">
+                <div class="menu-mobile">
+                    <ul class="menu-nav">
+                        <li><a href="~/" class="corner" runat="server">Trang chủ</a></li>
+                        <li><a href="#" class="corner">Giới thiệu</a></li>
+                        <li><a href="#" class="corner">Dịch vụ</a>
+                            <ul>
+                                <li><a href="dich-vu.aspx" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>xét nghiệm y khoa</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>khám
+                                    sức khỏe định kỳ công ty</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>khám
+                                    &amp điều trị bệnh chuyên khoa</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>khám
+                                    bảo hiểm nhân thọ</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>lấy
+                                    máu xét nghiệm tại nhà</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="corner">Các chuyên khoa</a>
+                            <ul>
+                                <li><a href="cac-chuyen-khoa.aspx" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Nội Tổng Quát</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Nội
+                                    Tim Mạch</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Tai
+                                    Mũi Họng</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Răng
+                                    Hàm Mặt</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Xét
+                                    Nghiệm</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Chuẩn
+                                    Đoán Hình Ảnh</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Sản
+                                    Phụ Khoa</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="corner">Kết quả trực tuyến</a></li>
+                        <li><a href="#" class="corner">Ý kiến phản hồi</a></li>
+                        <li><a href="#" class="corner">Tin tức</a></li>
+                        <li><a href="#" class="corner">Thư viện ảnh</a></li>
+                        <li><a href="#" class="corner">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end menumobile-->
+        <asp:ContentPlaceHolder ID="cphBottom" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="sroltop">
+        <a class="corner" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-up">
+        </span></a>
+    </div>
+    <!--active-->
+    <div id="runScript" runat="server">
+    </div>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--script pannel mobile-->
+    <script src="assets/js/jquery.panel.mobile.js" type="text/javascript"></script>
+    <!--script banner-->
+    <script src="assets/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    </form>
+</body>
+</html>
