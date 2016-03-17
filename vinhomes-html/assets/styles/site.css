@@ -90,7 +90,6 @@ body
 }
 #header-menu
 {
-    background-color: #1b75bc;
     left: 0;
     top: 0;
     position: relative;
@@ -106,7 +105,7 @@ body
 }
 #header .header-left
 {
-    width: 50%;
+    width: 40%;
     float: left;
     overflow: hidden;
     margin-left: 20px;
@@ -147,13 +146,20 @@ body
 }
 #hotline
 {
-    color: #787878;
+    color: #b98e3b;
     font-size: 14px;
     overflow: hidden;
-    line-height: 30px;
+    line-height: 60px;
     margin-left: 10px;
     width: 262px;
+    height: 87px;
     float: right;
+    background-color: #00006b;
+    border: 1px solid #ac8609;
+    border-right: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 #hotline img {
     display: block;
@@ -161,7 +167,7 @@ body
 }
 #hotline .phone
 {
-    background: url(../images/phone.png) no-repeat left 2px;
+    background: url(../images/phone.png) no-repeat 18px 20px;
     display: block;
     float: right;
 }
@@ -169,14 +175,18 @@ body
 {
     display: block;
     float: left;
-    padding-right: 5px;
+    padding-left: 72px;
+    height: 25px;
+    width: 100%;
 }
 #hotline .phone strong
 {
-    color: #ed1c24;
+    color: #b98e3b;
     display: block;
-    float: right;
-    font-size: 24px;
+    float: left;
+    width: 100%;
+    padding-left: 72px;
+    font-size: 36px;
     font-weight: 700;
     vertical-align: middle;
 }
@@ -185,7 +195,6 @@ body
     display: block;
 }
 #menu {
-    overflow: hidden;
     position: relative;
     width: 230px;
     z-index: 99;
@@ -193,17 +202,19 @@ body
 }
 #menu li {
     margin-bottom: 4px;
+    position: relative;
 }
 #menu > li > a {
     color: #cfa54d;
     display: block;
     font-size: 15px;
     font-weight: 700;
+    position: relative;
     line-height: 43px;
     text-transform: uppercase;
     text-align: center;
     background-color: #00006b;
-        border-radius: 25px;
+    border-radius: 25px;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border: 1px solid #ac8609
@@ -213,14 +224,12 @@ body
 }
 #menu > li > a:hover, #menu > li:hover > a, #menu > li.active > a
 {
-    background-color: #e9121b;
+    background-color: #bf9844;
+    color: #3e2a00;
     text-decoration: none;
 }
 #menu .menu-sub
 {
-    background-color: #1b75bc;
-    border: solid 1px #fff;
-    border-top: none;
     display: none;
     list-style: none;
     padding: 0;
@@ -228,26 +237,29 @@ body
     position: absolute;
     overflow: hidden;
     white-space: nowrap;
-    width: auto;
+    width: 230px;
+    z-index: 99;
 }
 #menu .menu-right
 {
-    left: auto;
-    right: 0;
-}
-.menu-sub li
-{
-    border-top: solid 1px #fff;
+    left: 100%;
+    right: auto;
+    top: 0;
 }
 .menu-sub li a
 {
     color: #fff;
     display: block;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-    padding: 5px 20px 5px 30px;
-    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 43px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+     background-color: #00006b;
+    border: solid 1px #ac8609;
     position: relative;
 }
 .menu-sub .glyphicon
@@ -264,29 +276,42 @@ body
 }
 .menu-sub li.active a, .menu-sub li a:hover
 {
-    background-color: #e9121b;
     text-decoration: none;
+    color: #dea226;
+}
+#menu .icona-right {
+    position: absolute;
+    top: 35%;
+    right: 10px;
 }
 /*================menu-mobile================*/
 #hotline-mo
 {
-    background: url('../images/icon-phone2.png') no-repeat 15px 10px;
-    color: #fff;
+    color: #b98e3b;
     font-size: 13px;
     line-height: 40px;
     padding-left: 35px;
     overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: auto;
+    right: 65px;
 }
 #hotline-mo strong
 {
-    font-size: 18px;
+    font-size: 26px;
+    font-weight: 700;
 }
 .button-menu
 {
-    background-color: #1b75bc;
+    background-color: #ac8609;
     float: right;
     height: 42px;
     width: 48px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 10px;
 }
 .button-menu a {
     display: block;
@@ -389,6 +414,59 @@ body
     z-index: 1;
 }
 /*================*/
+.menu-content
+{
+    margin: 0;
+    width: 100%;
+    display: none;
+}
+#menul2
+{
+    list-style: none;
+    margin: 15px 0 0;
+    position: absolute;
+    width: 199px;
+    z-index: 9999;
+    left: auto;
+    right: 0;
+    top: 36px;
+}
+#menul2 li a
+{
+    background: #fff;
+    border-bottom: solid 1px #fff;
+    opacity: .9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";/*IE8+*/  
+    filter: alpha(opacity=90); /* IE7 and lower */ 
+    padding: 0;
+}
+#menul2 li a
+{
+    color: #272f39;
+    display: block;
+    font-size: 14px;
+    line-height: 33px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#menul2 li a
+{
+    background: #fff;
+    border-bottom: solid 1px #fff;
+    opacity: .9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";/*IE8+*/  
+    filter: alpha(opacity=90); /* IE7 and lower */ 
+    padding: 0;
+}
+#menul2 li a:hover, #menul2 li.active a
+{
+    background: #8499a6;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
 .menu-nav, .menu-nav ul
 {
     list-style: none;
@@ -762,12 +840,31 @@ body .mobilep-right {
 }
 @media (max-width: 980px)
 {
-    #header .header-top {
-        padding: 15px;
-    }
     .header-right {
         top: 15px;
     }
+    .desktop-showhide
+    {
+        display: none !important;
+    }
+    .mobile-showhide
+    {
+        display: block !important;
+    }
+    .desktop-show {
+        display: none;
+    }
+    #header .header-right {
+        padding-top: 20px;
+        width: 316px;
+    }
+    #language {
+        width: 30%;
+    }
+    #language img {
+        width: 32px;
+    }
+    
 }
 @media (min-width: 768px)
 {
@@ -792,28 +889,11 @@ body .mobilep-right {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px)
 {
-    .desktop-showhide
-    {
-        display: none !important;
-    }
-    .mobile-showhide
-    {
-        display: block !important;
-    }
     #header-menu
     {
         background-color: #ed1c24;
     }
-    #header .header-top {
-        padding: 10px 15px;
-    }
-    #header .header-right {
-        width: 60px;
-        top: 0;
-    }
-    .desktop-show {
-        display: none;
-    }
+    
     #footer, #footer .text-right
     {
         text-align: center;
@@ -825,19 +905,7 @@ body .mobilep-right {
 }
 @media (min-width: 481px) and (max-width: 767px)
 {
-    #header .header-left{
-        float: none;
-        width: 100%;
-        margin: 0 auto;
-    }
-    #logo, #nameco {
-        float: none;
-        margin: 0 auto;
-    }
-    #nameco {
-        padding-top: 15px;
-        text-align: center;
-    }
+    
     
 }
 

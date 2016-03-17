@@ -12,7 +12,7 @@
         });
     });
     $(function () {
-        $(".panel-left").mobilepanel();
+        //$(".panel-left").mobilepanel();
         //$(".panel-right").mobilepanel({ panelLeft: false });
         mymenudes();
         menusroll();
@@ -21,14 +21,15 @@
             return false;
         });
         mysroll();
+        mymenu2();
     });
     //function===============================================================================================
     // function mymenudes() use hover menu show menusub
     function mymenudes() {
-        mymenusub();
-        $(window).resize(function () {
-            mymenusubre();
-        });
+        //mymenusub();
+//        $(window).resize(function () {
+//            mymenusubre();
+//        });
         $("#menu li").hover(function () {
             $(this).find(".menu-sub:first").stop(true, true).slideDown();
         }, function () {
@@ -43,9 +44,9 @@
             var position = $(this).position();
             var leftmenu = position.left;
             var menuw = $("#menu").width() - leftmenu;
-            if (menuw < wsub) {
+            //if (menuw < wsub) {
                 $(this).find(".menu-sub:first").addClass("menu-right");
-            }
+            //}
         });
         $("#menu").removeClass("show-menu").find(".menu-sub").hide();
         //            $("#menu").removeClass("show-menu");
@@ -61,6 +62,29 @@
             } else {
                 $(this).find(".menu-sub:first").removeClass("menu-right");
             }
+        });
+    }
+    //function menu2
+    function mymenu2() {
+        $('*').click(function () {
+            $(".button-menu a").click(function (e) {
+                e.stopPropagation();
+            });
+            var idmenu2 = $(".button-menu a").attr("href");
+            $(idmenu2).slideUp();
+            if ($(idmenu2).css('display') == 'none') {
+                $(".button-menu a").removeClass("current");
+            }
+        });
+        $(".button-menu a").click(function (e) {
+            $(this).toggleClass("current");
+            var idmenu = $(this).attr("href");
+            if ($(this).hasClass("current")) {
+                $(idmenu).slideToggle();
+            } else {
+                $(idmenu).slideUp();
+            }
+            return false;
         });
     }
     // function menusroll() when scroll menu always top not scroll

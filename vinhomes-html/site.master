@@ -51,61 +51,55 @@
                                         <img src="assets/images/flag-en.png" alt="" /></a>
                             </div>
                             <div id="hotline" class="desktop-showhide">
-                                <img src="assets/images/hotline.png" alt="" />
-                                <%--<div class="phone">
-                                        <span>Hotline</span><strong>0907 857 856</strong></div>--%>
+                                <div class="phone">
+                                    <span>Hotline</span><strong>1800 1186</strong></div>
                             </div>
                         </div>
                         <div class="clr">
                         </div>
                     </div>
                 </div>
-                <%--<div id="header-menu">
-                    <div class="container-in">
-                        <div class="wrapper-main">
-                            <div class="button-menu mobile-showhide">
-                                <a class="panel-left" href="#menumobile" data-position="true" data-type="false"><span
-                                    class="icon-bar">bar</span> <span class="icon-bar">bar</span> <span class="icon-bar">
-                                        bar</span> </a>
-                            </div>
-                            <div id="hotline-mo" class="mobile-showhide">
-                                <span>Hotline <strong>0907 857 856</strong></span>
-                            </div>
-                            
-                        </div>
+                <div class="button-menu mobile-showhide">
+                    <a class="panel-left" href="#menuContent" data-position="true" data-type="false"><span
+                        class="icon-bar">bar</span> <span class="icon-bar">bar</span> <span class="icon-bar">
+                            bar</span> </a>
+                </div>
+                <div id="menuContent" class="menu-content">
+                    <ul id="menul2">
+                        <li class="active"><a id="A2" href="~/" runat="server">Trang chủ</a></li>
+                        <li><a href="about-us.aspx">Giới thiệu</a></li>
+                        <li><a href="du-an-gioi-thieu.aspx">Dự án</a></li>  
+                    </ul>
+                </div>
+                <div id="hotline-mo" class="mobile-showhide">
+                    <span>Hotline <strong>1800 1186</strong></span>
+                </div>
+                <div id="header-menu">
+                    <ul id="menu" class="desktop-show">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
+                            <ul class="menu-sub menu-right">
+                                <li><a href="#">Sản phẩm</a></li>
+                                <li><a href="#">Tiện ích</a></li>
+                                <li><a href="#">Dịch vụ</a></li>
+                                <li><a href="#">An ninh an toàn</a></li>
+                                <li><a href="#">Văn hoá cộng đồng</a></li>
+                                <li><a href="#">Môi trường sống</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Dự án<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
+                            <ul class="menu-sub menu-right">
+                                <li><a href="#">Sản phẩm</a></li>
+                                <li><a href="#">Tiện ích</a></li>
+                                <li><a href="#">Dịch vụ</a></li>
+                                <li><a href="#">An ninh an toàn</a></li>
+                                <li><a href="#">Văn hoá cộng đồng</a></li>
+                                <li><a href="#">Môi trường sống</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clr">
                     </div>
-                </div>--%>
-                <ul id="menu" class="desktop-show">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Giới thiệu<span class="glyphicon glyphicon-chevron-right"></span></a>
-                        <ul class="menu-sub">
-                            <li><a href="dich-vu.aspx"><span class="glyphicon glyphicon-chevron-right"></span>xét
-                                nghiệm y khoa</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>khám sức khỏe
-                                định kỳ công ty</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>khám &amp; điều
-                                trị bệnh chuyên khoa</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>khám bảo hiểm
-                                nhân thọ</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>lấy máu xét nghiệm
-                                tại nhà</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Dự án</a>
-                        <ul class="menu-sub">
-                            <li><a href="cac-chuyen-khoa.aspx"><span class="glyphicon glyphicon-chevron-right"></span>
-                                Nội Tổng Quát</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Nội Tim Mạch</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Tai Mũi Họng</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Răng Hàm Mặt</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Xét Nghiệm</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Chuẩn Đoán Hình
-                                Ảnh</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span>Sản Phụ Khoa</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="clr">
                 </div>
             </div>
             <div id="mainContent">
@@ -114,40 +108,24 @@
             </div>
             <!--footer-->
             <div id="footer">
-                <div class="container">
-                    <h2>
-                        Medical Diag Center
-                    </h2>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="footer-box">
-                                <p>
-                                    Cơ sở 1: 146 An Bình, Phường 7, Quận 5, Tp. HCM</p>
-                                <p>
-                                    ĐT: (84.8) 8381 551 - Fax: (84.8) 8381 554</p>
-                                <p>
-                                    Email: <a href="mailto:labgroupint@hcm.vnn.vn">labgroupint@hcm.vnn.vn</a></p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="footer-box">
-                                <p>
-                                    Cơ sở 2: 75 Phạm Viết Chánh, P. Nguyễn Cư Trinh, Q. 1, Tp. HCM</p>
-                                <p>
-                                    ĐT: (84.8) 39255 610</p>
-                                <p>
-                                    Email: <a href="mailto:info@diag-center.com">info@diag-center.com</a></p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="footer-box text-right">
-                                <p>
-                                    &copy; Copyright 2015 - Medical Diag Center. Allright reserved</p>
-                                <p>
-                                    <a href="http://wwww.tranlegroup.com" target="_blank">Website</a> <a href="http://wwww.tranlegroup.com"
-                                        target="_blank">by Tran Le</a></p>
-                            </div>
-                        </div>
+                <div class="col-sm-6">
+                    <div class="footer-box">
+                        <p>
+                            Cơ sở 1: 146 An Bình, Phường 7, Quận 5, Tp. HCM</p>
+                        <p>
+                            ĐT: (84.8) 8381 551 - Fax: (84.8) 8381 554</p>
+                        <p>
+                            Email: <a href="mailto:labgroupint@hcm.vnn.vn">labgroupint@hcm.vnn.vn</a></p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="footer-box">
+                        <p>
+                            Cơ sở 1: 146 An Bình, Phường 7, Quận 5, Tp. HCM</p>
+                        <p>
+                            ĐT: (84.8) 8381 551 - Fax: (84.8) 8381 554</p>
+                        <p>
+                            Email: <a href="mailto:labgroupint@hcm.vnn.vn">labgroupint@hcm.vnn.vn</a></p>
                     </div>
                 </div>
             </div>
