@@ -33,9 +33,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="wrapper-all"></div>
     <div id="wrapper">
-        
         <div id="wrapper-in">
             <div id="header">
                 <div class="header-top">
@@ -58,7 +56,31 @@
                                     <span>Hotline</span><strong>1800 1186</strong></div>
                             </div>
                             <div class="contactus">
-                                <span>Liên hệ với chúng tôi</span>
+                                <a class="link-a login-link desktop-showhide" href="#login">Liên hệ với chúng tôi<span
+                                    class="icona-right glyphicon glyphicon-chevron-right"></span></a> <a class="link-a login-link mobile-showhide"
+                                        href="#login">
+                                        <img src="assets/images/e_mail.png" alt="" /></a>
+                                <div id="login">
+                                    <div class="login-input">
+                                        <asp:TextBox ID="TextBox3" CssClass="login-text" runat="server" Text="Họ tên"></asp:TextBox>
+                                    </div>
+                                    <div class="login-input">
+                                        <asp:TextBox ID="TextBox4" CssClass="login-text" runat="server" Text="Email"></asp:TextBox>
+                                    </div>
+                                    <div class="login-input">
+                                        <asp:TextBox ID="TextBox1" CssClass="login-text" runat="server" Text="Điện thoại"></asp:TextBox>
+                                    </div>
+                                    <div class="login-input">
+                                        <asp:TextBox ID="TextBox2" CssClass="login-text" runat="server" Text="Địa chỉ"></asp:TextBox>
+                                    </div>
+                                    <div class="login-input">
+                                        <asp:TextBox ID="TextBox5" CssClass="login-text content-area" runat="server" Text="Nội dung"
+                                            TextMode="MultiLine"></asp:TextBox>
+                                    </div>
+                                    <div class="login-input">
+                                        <asp:Button ID="LoginButton1" CssClass="btn-a" runat="server" Text="Gửi" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="clr">
@@ -67,26 +89,25 @@
                 </div>
                 <div id="header-menu">
                     <div class="button-menu mobile-showhide">
-                        <a class="panel-left" href="#menuContent" data-position="true" data-type="false"><span
-                            class="icon-bar">bar</span> <span class="icon-bar">bar</span> <span class="icon-bar">
-                                bar</span> </a>
+                        <a class="panel-left" href="#menuContent"><span class="icon-bar">bar</span> <span
+                            class="icon-bar">bar</span> <span class="icon-bar">bar</span> </a>
                     </div>
                     <div id="menuContent" class="menu-content">
-                    <ul id="menul2">
-                        <li class="active"><a id="A2" href="~/" runat="server">Trang chủ</a></li>
-                        <li><a href="#">Giới thiệu</a>
-                            <ul class="menul2-sub">
-                                <li><a href="#">Sản phẩm</a></li>
-                                <li><a href="#">Tiện ích</a></li>
-                                <li><a href="#">Dịch vụ</a></li>
-                                <li><a href="#">An ninh an toàn</a></li>
-                                <li><a href="#">Văn hoá cộng đồng</a></li>
-                                <li><a href="#">Môi trường sống</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Dự án</a></li>
-                    </ul>
-                </div>
+                        <ul id="menul2">
+                            <li class="active"><a id="A2" href="~/" runat="server">Trang chủ</a></li>
+                            <li><a href="#">Giới thiệu</a>
+                                <ul class="menul2-sub">
+                                    <li><a href="#">Sản phẩm</a></li>
+                                    <li><a href="#">Tiện ích</a></li>
+                                    <li><a href="#">Dịch vụ</a></li>
+                                    <li><a href="#">An ninh an toàn</a></li>
+                                    <li><a href="#">Văn hoá cộng đồng</a></li>
+                                    <li><a href="#">Môi trường sống</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Dự án</a></li>
+                        </ul>
+                    </div>
                     <div id="hotline-mo" class="mobile-showhide">
                         <span>Hotline <strong>1800 1186</strong></span>
                     </div>
@@ -120,6 +141,25 @@
             <div id="mainContent">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
+            </div>
+            <div class="wrapper-support">
+                <div class="support">
+                    <a href="javascript:void(0);" id="button">Tư vấn / Hỗ trợ<span class="icona-support"><img
+                        src="assets/images/icon-support.png" alt=""/></span></a></div>
+                <div class="toggler">
+                    <div id="effect" class="ui-widget-content ui-corner-all">
+                        <p>
+                            Xin chào mừng bạn đến với VinHomes. Vui lòng cho chúng tôi biết mọi thắc mắc của
+                            quý khách để có thể hỗ trợ quý khách tốt nhất.
+                        </p>
+                        <div class="support-input">
+                            <asp:TextBox ID="TextBox6" CssClass="content-area" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </div>
+                        <div class="support-input">
+                            <asp:Button ID="Button1" CssClass="btn-support" runat="server" Text="Bắt đầu chat" />
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--footer-->
             <div id="footer">
@@ -194,7 +234,8 @@
         <asp:ContentPlaceHolder ID="cphBottom" runat="server">
         </asp:ContentPlaceHolder>
     </div>
-    <div class="mainbg"></div>
+    <div class="mainbg">
+    </div>
     <div id="sroltop">
         <a class="corner" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-up">
         </span></a>

@@ -3,47 +3,93 @@
 
     }
     $(window).load(function () {
-        // slider banner
-        $('#slidernopage').nivoSlider({
-            pauseTime: 4000,
-            pauseOnHover: false,
-            controlNav: true,
-            directionNav: false
-        });
+        // slider content
+        
         $('.slick-slider').slick({
             centerMode: true,
 //            centerPadding: '40px',
             slidesToShow: 3,
             responsive: [
-    {
-        breakpoint: 768,
-        settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '20px',
-            slidesToShow: 3
-        }
-    },
-    {
-        breakpoint: 480,
-        settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '20px',
-            slidesToShow: 1
-        }
-    }
-  ]
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '20px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '20px',
+                slidesToShow: 1
+            }
+        }]
         });
     });
     $(function () {
         //$(".panel-left").mobilepanel();
         //$(".panel-right").mobilepanel({ panelLeft: false });
+        $(".panel-left").click(function () {
+            $(this).toggleClass("current");
+            var idmenu = $(this).attr("href");
+            if ($(this).hasClass("current")) {
+                $(idmenu).slideDown();
+            } else {
+                $(idmenu).slideUp();
+            }
+            $("#menuContent").mouseleave(function () {
+                $(".panel-left").removeClass("current");
+                $("#menuContent").fadeOut();
+            });
+        });
         mymenudes();
         menusroll();
         $("#sroltop a").click(function () {
             $("html, body").stop(true, true).animate({ scrollTop: 0 }, 500);
             return false;
+        });
+        $(".login-link").click(function () {
+            //$("#mask-bg").remove();
+            $(this).toggleClass("current");
+            var idlogin = $(this).attr("href");
+            if ($(this).hasClass("current")) {
+                $(idlogin).slideDown();
+                //$("#wrapper").append('<div id="mask-bg"></div>');
+            } else {
+                $(idlogin).slideUp();
+                //$("#mask-bg").remove();
+            }
+            $("#login").mouseleave(function () {
+                $(".login-link").removeClass("current");
+                $("#login").fadeOut();
+                //  $("#mask-bg").remove();
+            });
+            return false;
+        });
+        function runEffect() {
+            // get effect type from
+            var selectedEffect = $("#effectTypes").val();
+
+            // most effect types need no options passed by default
+            var options = {};
+            // some effects have required parameters
+            if (selectedEffect === "scale") {
+                options = { percent: 0 };
+            } else if (selectedEffect === "size") {
+                options = { to: { width: 200, height: 60} };
+            }
+
+            // run the effect
+            $("#effect").toggle(selectedEffect, options, 500);
+        };
+
+        // set effect from select menu value
+        $("#button").click(function () {
+            runEffect();
         });
         mysroll();
         mymenu2();
@@ -55,11 +101,15 @@
         //        $(window).resize(function () {
         //            mymenusubre();
         //        });
-        $("#menu li").hover(function () {
+        $("#menu > li").hover(function () {
             //$('.wrapper-all').show();
+            $("#wrapper").append('<div id="mask-bg"></div>');
             $(this).find(".menu-sub:first").stop(true, true).slideDown();
         }, function () {
             $(this).find(".menu-sub:first").stop(true, true).slideUp();
+        });
+        $("#menu > li").mouseleave(function() {
+            $("#mask-bg").remove();
         });
         $("#menul2 li").hover(function () {
             $(this).find(".menul2-sub:first").stop(true, true).slideDown();
