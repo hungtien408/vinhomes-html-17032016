@@ -10,6 +10,31 @@
             controlNav: true,
             directionNav: false
         });
+        $('.slick-slider').slick({
+            centerMode: true,
+//            centerPadding: '40px',
+            slidesToShow: 3,
+            responsive: [
+    {
+        breakpoint: 768,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '20px',
+            slidesToShow: 3
+        }
+    },
+    {
+        breakpoint: 480,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '20px',
+            slidesToShow: 1
+        }
+    }
+  ]
+        });
     });
     $(function () {
         //$(".panel-left").mobilepanel();
@@ -27,14 +52,26 @@
     // function mymenudes() use hover menu show menusub
     function mymenudes() {
         //mymenusub();
-//        $(window).resize(function () {
-//            mymenusubre();
-//        });
+        //        $(window).resize(function () {
+        //            mymenusubre();
+        //        });
         $("#menu li").hover(function () {
+            //$('.wrapper-all').show();
             $(this).find(".menu-sub:first").stop(true, true).slideDown();
         }, function () {
             $(this).find(".menu-sub:first").stop(true, true).slideUp();
         });
+        $("#menul2 li").hover(function () {
+            $(this).find(".menul2-sub:first").stop(true, true).slideDown();
+        }, function () {
+            $(this).find(".menul2-sub:first").stop(true, true).slideUp();
+        });
+//        var $dim = $('.wrapper-all');
+//        $('#menu li').hover(function () {
+//            $dim.fadeIn(200);
+//        }, function () {
+//            $dim.fadeOut(200);
+//        });
     }
     function mymenusub() {
         $("#menu").addClass("show-menu").find(".menu-sub").show();
@@ -45,7 +82,7 @@
             var leftmenu = position.left;
             var menuw = $("#menu").width() - leftmenu;
             //if (menuw < wsub) {
-                $(this).find(".menu-sub:first").addClass("menu-right");
+            $(this).find(".menu-sub:first").addClass("menu-right");
             //}
         });
         $("#menu").removeClass("show-menu").find(".menu-sub").hide();

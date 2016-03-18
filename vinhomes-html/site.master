@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <link href="assets/styles/slick.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/site.css" rel="stylesheet" type="text/css" />
     <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/slick.min.js" type="text/javascript"></script>
     <script src="assets/js/jquery.main.js" type="text/javascript"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -31,8 +33,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="wrapper-all"></div>
     <div id="wrapper">
-        <!--#wrapper-in use panel type 2-->
+        
         <div id="wrapper-in">
             <div id="header">
                 <div class="header-top">
@@ -54,31 +57,25 @@
                                 <div class="phone">
                                     <span>Hotline</span><strong>1800 1186</strong></div>
                             </div>
+                            <div class="contactus">
+                                <span>Liên hệ với chúng tôi</span>
+                            </div>
                         </div>
                         <div class="clr">
                         </div>
                     </div>
                 </div>
-                <div class="button-menu mobile-showhide">
-                    <a class="panel-left" href="#menuContent" data-position="true" data-type="false"><span
-                        class="icon-bar">bar</span> <span class="icon-bar">bar</span> <span class="icon-bar">
-                            bar</span> </a>
-                </div>
-                <div id="menuContent" class="menu-content">
+                <div id="header-menu">
+                    <div class="button-menu mobile-showhide">
+                        <a class="panel-left" href="#menuContent" data-position="true" data-type="false"><span
+                            class="icon-bar">bar</span> <span class="icon-bar">bar</span> <span class="icon-bar">
+                                bar</span> </a>
+                    </div>
+                    <div id="menuContent" class="menu-content">
                     <ul id="menul2">
                         <li class="active"><a id="A2" href="~/" runat="server">Trang chủ</a></li>
-                        <li><a href="about-us.aspx">Giới thiệu</a></li>
-                        <li><a href="du-an-gioi-thieu.aspx">Dự án</a></li>  
-                    </ul>
-                </div>
-                <div id="hotline-mo" class="mobile-showhide">
-                    <span>Hotline <strong>1800 1186</strong></span>
-                </div>
-                <div id="header-menu">
-                    <ul id="menu" class="desktop-show">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Giới thiệu<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
-                            <ul class="menu-sub menu-right">
+                        <li><a href="#">Giới thiệu</a>
+                            <ul class="menul2-sub">
                                 <li><a href="#">Sản phẩm</a></li>
                                 <li><a href="#">Tiện ích</a></li>
                                 <li><a href="#">Dịch vụ</a></li>
@@ -87,14 +84,32 @@
                                 <li><a href="#">Môi trường sống</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Dự án<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
+                        <li><a href="#">Dự án</a></li>
+                    </ul>
+                </div>
+                    <div id="hotline-mo" class="mobile-showhide">
+                        <span>Hotline <strong>1800 1186</strong></span>
+                    </div>
+                    <ul id="menu" class="desktop-show">
+                        <li><a href="#" class="corner">Trang chủ</a></li>
+                        <li><a href="#" class="corner">Giới thiệu<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
                             <ul class="menu-sub menu-right">
-                                <li><a href="#">Sản phẩm</a></li>
-                                <li><a href="#">Tiện ích</a></li>
-                                <li><a href="#">Dịch vụ</a></li>
-                                <li><a href="#">An ninh an toàn</a></li>
-                                <li><a href="#">Văn hoá cộng đồng</a></li>
-                                <li><a href="#">Môi trường sống</a></li>
+                                <li><a href="#" class="corner">Sản phẩm</a></li>
+                                <li><a href="#" class="corner">Tiện ích</a></li>
+                                <li><a href="#" class="corner">Dịch vụ</a></li>
+                                <li><a href="#" class="corner">An ninh an toàn</a></li>
+                                <li><a href="#" class="corner">Văn hoá cộng đồng</a></li>
+                                <li><a href="#" class="corner">Môi trường sống</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="corner">Dự án<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
+                            <ul class="menu-sub menu-right">
+                                <li><a href="#" class="corner">Sản phẩm</a></li>
+                                <li><a href="#" class="corner">Tiện ích</a></li>
+                                <li><a href="#" class="corner">Dịch vụ</a></li>
+                                <li><a href="#" class="corner">An ninh an toàn</a></li>
+                                <li><a href="#" class="corner">Văn hoá cộng đồng</a></li>
+                                <li><a href="#" class="corner">Môi trường sống</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -110,29 +125,28 @@
             <div id="footer">
                 <div class="col-sm-6">
                     <div class="footer-box">
-                        <p>
-                            Cơ sở 1: 146 An Bình, Phường 7, Quận 5, Tp. HCM</p>
-                        <p>
-                            ĐT: (84.8) 8381 551 - Fax: (84.8) 8381 554</p>
-                        <p>
-                            Email: <a href="mailto:labgroupint@hcm.vnn.vn">labgroupint@hcm.vnn.vn</a></p>
+                        <div class="share-fa">
+                            Follow us on <a href="#">
+                                <img src="assets/images/fbox-4.png" alt="" /></a><a href="#"><img src="assets/images/fbox-3.png"
+                                    alt="" /></a><a href="#"><img src="assets/images/fbox-2.png" alt="" /></a><a href="#"><img
+                                        src="assets/images/fbox-1.png" alt="" /></a></div>
+                        <div class="online">
+                            Đang online: <strong>153</strong> | Lượt truy cập: <strong>5213451</strong></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="footer-box">
+                    <div class="footer-box text-right">
                         <p>
-                            Cơ sở 1: 146 An Bình, Phường 7, Quận 5, Tp. HCM</p>
-                        <p>
-                            ĐT: (84.8) 8381 551 - Fax: (84.8) 8381 554</p>
-                        <p>
-                            Email: <a href="mailto:labgroupint@hcm.vnn.vn">labgroupint@hcm.vnn.vn</a></p>
+                            &copy; 2016 - VINHOME. All Rights Reserved | <a href="http://wwww.tranlegroup.com"
+                                target="_blank">Thiết kế web</a> <a href="http://wwww.tranlegroup.com" target="_blank">
+                                    Tran Le</a></p>
                     </div>
                 </div>
             </div>
             <!--end footer-->
         </div>
         <!--menumobile-->
-        <div id="menumobile" class="mobile-panel mobilep-left">
+        <%--<div id="menumobile" class="mobile-panel mobilep-left">
             <div class="close-menu">
                 <a href="#menumobile" class="glyphicon glyphicon-remove-circle"></a>
             </div>
@@ -140,52 +154,47 @@
                 <div class="menu-mobile">
                     <ul class="menu-nav">
                         <li><a href="~/" class="corner" runat="server">Trang chủ</a></li>
-                        <li><a href="#" class="corner">Giới thiệu</a></li>
-                        <li><a href="#" class="corner">Dịch vụ</a>
+                        <li><a href="#" class="corner">Giới thiệu</a>
                             <ul>
-                                <li><a href="dich-vu.aspx" class="corner"><span class="glyphicon glyphicon-menu-right">
-                                </span>xét nghiệm y khoa</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>khám
-                                    sức khỏe định kỳ công ty</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>khám
-                                    &amp điều trị bệnh chuyên khoa</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>khám
-                                    bảo hiểm nhân thọ</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>lấy
-                                    máu xét nghiệm tại nhà</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Sản phẩm</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Tiện ích</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Dịch vụ</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>An ninh an toàn</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Văn hoá cộng đồng</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Môi trường sống</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="corner">Các chuyên khoa</a>
+                        <li><a href="#" class="corner">Dự án</a>
                             <ul>
-                                <li><a href="cac-chuyen-khoa.aspx" class="corner"><span class="glyphicon glyphicon-menu-right">
-                                </span>Nội Tổng Quát</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Nội
-                                    Tim Mạch</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Tai
-                                    Mũi Họng</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Răng
-                                    Hàm Mặt</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Xét
-                                    Nghiệm</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Chuẩn
-                                    Đoán Hình Ảnh</a></li>
-                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right"></span>Sản
-                                    Phụ Khoa</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Sản phẩm</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Tiện ích</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Dịch vụ</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>An ninh an toàn</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Văn hoá cộng đồng</a></li>
+                                <li><a href="#" class="corner"><span class="glyphicon glyphicon-menu-right">
+                                </span>Môi trường sống</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="corner">Kết quả trực tuyến</a></li>
-                        <li><a href="#" class="corner">Ý kiến phản hồi</a></li>
-                        <li><a href="#" class="corner">Tin tức</a></li>
-                        <li><a href="#" class="corner">Thư viện ảnh</a></li>
-                        <li><a href="#" class="corner">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>--%>
         <!--end menumobile-->
         <asp:ContentPlaceHolder ID="cphBottom" runat="server">
         </asp:ContentPlaceHolder>
     </div>
+    <div class="mainbg"></div>
     <div id="sroltop">
         <a class="corner" href="javascript:void(0);"><span class="glyphicon glyphicon-chevron-up">
         </span></a>
