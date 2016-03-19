@@ -33,18 +33,23 @@
     $(function () {
         //$(".panel-left").mobilepanel();
         //$(".panel-right").mobilepanel({ panelLeft: false });
-        $(".panel-left").click(function () {
-            $(this).toggleClass("current");
-            var idmenu = $(this).attr("href");
-            if ($(this).hasClass("current")) {
-                $(idmenu).slideDown();
-            } else {
-                $(idmenu).slideUp();
-            }
-            $("#menuContent").mouseleave(function () {
-                $(".panel-left").removeClass("current");
-                $("#menuContent").fadeOut();
-            });
+//        $(".panel-left").click(function () {
+//            $(this).toggleClass("current");
+//            var idmenu = $(this).attr("href");
+//            if ($(this).hasClass("current")) {
+//                $(idmenu).slideDown();
+//            } else {
+//                $(idmenu).slideUp();
+//            }
+//            $("#menuContent").mouseleave(function () {
+//                $(".panel-left").removeClass("current");
+//                $("#menuContent").fadeOut();
+//            });
+//            return false;
+//        });
+        $("#menuContent").mouseleave(function () {
+            $(".panel-left").removeClass("current");
+            $("#menuContent").fadeOut();
         });
         mymenudes();
         menusroll();

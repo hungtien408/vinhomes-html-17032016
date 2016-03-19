@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
     <link href="assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/slick.css" rel="stylesheet" type="text/css" />
@@ -95,42 +96,37 @@
                     <div id="menuContent" class="menu-content">
                         <ul id="menul2">
                             <li class="active"><a id="A2" href="~/" runat="server">Trang chủ</a></li>
-                            <li><a href="#">Giới thiệu</a>
+                            <li><a href="about-us.aspx">Giới thiệu</a>
                                 <ul class="menul2-sub">
-                                    <li><a href="#">Sản phẩm</a></li>
-                                    <li><a href="#">Tiện ích</a></li>
-                                    <li><a href="#">Dịch vụ</a></li>
-                                    <li><a href="#">An ninh an toàn</a></li>
-                                    <li><a href="#">Văn hoá cộng đồng</a></li>
-                                    <li><a href="#">Môi trường sống</a></li>
+                                    <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Thư ngõ</a></li>
+                                    <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Giới thiệu dự án</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Dự án</a></li>
+                            <li><a href="#">Dự án</a>
+                                <ul class="menul2-sub">
+                                    <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Vinhomes Bason</a></li>
+                                    <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Vinhomes Tân Cảng</a></li>
+                                    <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Vinhomes Nha Trang</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div id="hotline-mo" class="mobile-showhide">
                         <span>Hotline <strong>1800 1186</strong></span>
                     </div>
                     <ul id="menu" class="desktop-show">
-                        <li><a href="#" class="corner">Trang chủ</a></li>
-                        <li><a href="#" class="corner">Giới thiệu<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
+                        <li><a href="~/" class="corner" runat="server">Trang chủ</a></li>
+                        <li><a href="about-us.aspx" class="corner">Giới thiệu<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
                             <ul class="menu-sub menu-right">
-                                <li><a href="#" class="corner">Sản phẩm</a></li>
-                                <li><a href="#" class="corner">Tiện ích</a></li>
-                                <li><a href="#" class="corner">Dịch vụ</a></li>
-                                <li><a href="#" class="corner">An ninh an toàn</a></li>
-                                <li><a href="#" class="corner">Văn hoá cộng đồng</a></li>
-                                <li><a href="#" class="corner">Môi trường sống</a></li>
+                                <li><a href="#" class="corner">Thư ngõ</a></li>
+                                <li><a href="#" class="corner">Giới thiệu dự án</a></li>
                             </ul>
                         </li>
                         <li><a href="#" class="corner">Dự án<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
                             <ul class="menu-sub menu-right">
-                                <li><a href="#" class="corner">Sản phẩm</a></li>
-                                <li><a href="#" class="corner">Tiện ích</a></li>
-                                <li><a href="#" class="corner">Dịch vụ</a></li>
-                                <li><a href="#" class="corner">An ninh an toàn</a></li>
-                                <li><a href="#" class="corner">Văn hoá cộng đồng</a></li>
-                                <li><a href="#" class="corner">Môi trường sống</a></li>
+                                <li><a href="#" class="corner">Vinhomes Bason</a></li>
+                                <li><a href="#" class="corner">Vinhomes Tân Cảng</a></li>
+                                <li><a href="#" class="corner">Vinhomes Nha Trang</a></li>
                             </ul>
                         </li>
                     </ul>

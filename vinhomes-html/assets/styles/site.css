@@ -71,6 +71,10 @@ body
 {
     width: 100%;
 }
+.wrapper-in {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .row-in
 {
     overflow: hidden;
@@ -204,7 +208,7 @@ body
     vertical-align: middle;
 }
 .contactus, .support {
-    background-color: #bb913e;
+    background: #bb913e url('../images/bg-suppoort.png') repeat center center;
     float: right;
     width: 262px;
     height: 35px;
@@ -231,7 +235,8 @@ body
     width: 262px;
     float: right;
     background-color: #fff;
-    position: relative;    
+    position: relative;
+    z-index: 3;  
 }
 #effect {
     position: relative;
@@ -327,7 +332,7 @@ body
 }
 #menu > li > a:hover, #menu > li:hover > a, #menu > li.active > a
 {
-    background-color: #bf9844;
+    background: #bf9844 url('../images/bg-menu.png') repeat center center;
     color: #3e2a00;
     text-decoration: none;
 }
@@ -611,9 +616,14 @@ body
     color: #cfa54d;
     display: block;
     font-size: 14px;
+    font-weight: 700;
     line-height: 33px;
     text-transform: uppercase;
     text-align: center;
+}
+.icon-menucontent {
+    padding-right: 5px;
+    display: none;
 }
 #menul2 li a
 {
@@ -745,6 +755,8 @@ body
     right: 0;
     top: 0;
     position: fixed;
+    z-index: 2;
+    opacity: 12;
 }
 .btn-a, .btn-button
 {
@@ -887,6 +899,44 @@ body
     text-align: left;
     padding-left: 12px;
 }
+/*=======col aside====*/
+.wrapper-about {
+    background-color: #fff;
+    overflow: hidden;
+    padding-top: 10px;
+    width: 100%;
+}
+.col-aside {
+    float: left;
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 232px;
+    z-index: 10;
+}
+#site {
+    margin: 12px 0 15px;
+    width: 100%;
+}
+#site a, #site > span {
+    color: #000;
+    font-size: 11px;
+    font-style: italic;
+    margin: 0 2px;
+    padding: 5px 0 6px;
+    line-height: 16px; 
+    vertical-align: top;
+}
+#site a span {
+    font-size: 6px;
+    line-height: 12px;
+    text-align: right;
+    margin-left: 3px;
+    top: 0;
+}
+#site > span {
+    color: #123d5f;
+}
 /*======================================================FOOTER===========================================*/
 #wrapper #footer
 {
@@ -898,6 +948,7 @@ body
     /*position: absolute;*/
     position: relative;
     width: 100%;
+    z-index: 3;
 }
 #footer, #footer a
 {
@@ -1126,7 +1177,7 @@ body .mobilep-right {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px)
 {
-    #menu > li > a
+    #menu > li > a, .menu-sub li a
     {
         font-size: 12px;
         line-height: 42px;
@@ -1190,7 +1241,7 @@ body .mobilep-right {
 }
 @media (min-width: 768px) and (max-width: 870px)
 {
-    #menu > li > a {
+    #menu > li > a, .menu-sub li a {
         font-size: 11px;
         line-height: 36px;
     }
@@ -1319,35 +1370,35 @@ body .mobilep-right {
         top: 10px;
     }
     .slick-slider .slick-center .box-pro {
-        -moz-transform: scale(3.2);
-        -ms-transform: scale(3.2);
-        -o-transform: scale(3.2);
-        -webkit-transform: scale(3.2);
-        transform: scale(3.2);
+        -moz-transform: scale(3.4);
+        -ms-transform: scale(3.4);
+        -o-transform: scale(3.4);
+        -webkit-transform: scale(3.4);
+        transform: scale(3.4);
     }
     .title-pro, .pro-name {
         height: 8px;
         line-height: 8px;
-        font-size: 3px;
+        font-size: 3.5px;
     }  
     .title-pro {
-        bottom: 2px;
-        padding: 0 5px;
+        bottom: 5px;
+        padding: 0 5px 0 2px;
     }
     .pro-name 
     {
-        bottom: 4px;
-        padding-left: 5px;
+        bottom: 7px;
+        padding-left: 2px;
     }
     .slick-slider .box-pro {
-         border-radius: 6px;
-        -moz-border-radius: 6px;
-        -webkit-border-radius: 6px;
+         border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
     }
     .box-pro img {
-        border-radius: 6px;
-        -moz-border-radius: 6px;
-        -webkit-border-radius: 6px;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
     }
 }
 @media (max-width: 480px)
@@ -1365,26 +1416,37 @@ body .mobilep-right {
     .title-pro, .pro-name {
         height: 24px;
         line-height: 24px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .title-pro {
-        bottom: 30px;
+        bottom: 36px;
         padding: 0 5px;
     }
     .pro-name 
     {
-        bottom: 16px;
+        bottom: 22px;
         padding-left: 5px;
     }
     .slick-slider .box-pro {
-         border-radius: 22px;
-        -moz-border-radius: 22px;
-        -webkit-border-radius: 22px;
+         border-radius: 30px;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
     }
     .box-pro img {
-        border-radius: 22px;
-        -moz-border-radius: 22px;
-        -webkit-border-radius: 22px;
+        border-radius: 30px;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+    }
+    #menul2 .menul2-sub {
+        position: relative;
+        right: 0;
+    }
+    #menul2 li li a {
+        text-align: left;
+        padding-left: 10px;
+    }
+    .icon-menucontent {
+        display: inline-block;
     }
 }
 @media (max-width: 420px)
@@ -1409,11 +1471,11 @@ body .mobilep-right {
         top: -50px;
     }
     .slick-slider .slick-center .box-pro {
-        -moz-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        -o-transform: scale(0.8);
-        -webkit-transform: scale(0.8);
-        transform: scale(0.8);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
     }
     #language a {
         margin: 0;
