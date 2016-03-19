@@ -96,6 +96,15 @@
         $("#button").click(function () {
             runEffect();
         });
+        $('.listAside').textHeight({
+            activetit: true,
+            listcss: [{ cssname: ".box-name"}],
+            wpointb: false,
+            widthpont: 420,
+            desbool: true,
+            listpos: [{ cssnamepos: ".box-name a", cssheightnum: "1"}],
+            max: true
+        });
         mysroll();
         mymenu2();
     });
