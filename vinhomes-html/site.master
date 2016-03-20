@@ -32,6 +32,17 @@
     <!--[if lte IE 7]>
 	    <script src="assets/js/IE8.js" type="text/javascript"></script>
     <![endif]-->
+    <!--active menu-->
+    <script type="text/javascript">
+        function changeActiveMenu(page) {
+            $('#menu li').removeClass("active");
+            $('#menu li a[href*="' + page + '"]').parent("li").addClass("active");
+        }
+        function changeSubActiveMenu(page) {
+            $('#menu li li').removeClass("active");
+            $('#menu li li a[href$="' + page + '"]').closest("li").addClass("active");
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -105,7 +116,7 @@
                             </li>
                             <li><a href="project.aspx">Dự án</a>
                                 <ul class="menul2-sub">
-                                    <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Vinhomes Bason</a></li>
+                                    <li><a href="project-details.aspx"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Vinhomes Bason</a></li>
                                     <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Vinhomes Tân Cảng</a></li>
                                     <li><a href="#"><span class="icon-menucontent glyphicon glyphicon-chevron-right"></span>Vinhomes Nha Trang</a></li>
                                 </ul>
@@ -116,7 +127,7 @@
                         <span>Hotline <strong>1800 1186</strong></span>
                     </div>
                     <ul id="menu" class="desktop-show">
-                        <li><a href="~/" class="corner" runat="server">Trang chủ</a></li>
+                        <li class="active"><a href="~/" class="corner" runat="server">Trang chủ</a></li>
                         <li><a href="about-us.aspx" class="corner">Giới thiệu<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
                             <ul class="menu-sub menu-right">
                                 <li><a href="#" class="corner">Thư ngõ</a></li>
@@ -125,7 +136,7 @@
                         </li>
                         <li><a href="project.aspx" class="corner">Dự án<span class="icona-right glyphicon glyphicon-chevron-right"></span></a>
                             <ul class="menu-sub menu-right">
-                                <li><a href="#" class="corner">Vinhomes Bason</a></li>
+                                <li><a href="project-details.aspx" class="corner">Vinhomes Bason</a></li>
                                 <li><a href="#" class="corner">Vinhomes Tân Cảng</a></li>
                                 <li><a href="#" class="corner">Vinhomes Nha Trang</a></li>
                             </ul>

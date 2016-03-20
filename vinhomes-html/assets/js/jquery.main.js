@@ -117,25 +117,38 @@
         //        });
         $("#menu > li").hover(function () {
             //$('.wrapper-all').show();
-            $("#wrapper").append('<div id="mask-bg"></div>');
+            //$("#wrapper").append('<div id="mask-bg"></div>');
+            $(".mainbg").addClass("bgfilter");
+            $(".wrapper-project").addClass("bgfilter");
+            $(".wrapper-about").addClass("bgfilter");
+            $(".wrapper-slider").addClass("bgfilter");
             $(this).find(".menu-sub:first").stop(true, true).slideDown();
         }, function () {
             $(this).find(".menu-sub:first").stop(true, true).slideUp();
         });
         $("#menu > li").mouseleave(function() {
-            $("#mask-bg").remove();
+            //$("#mask-bg").remove();
+            $(".mainbg").removeClass("bgfilter");
+            $(".wrapper-project").removeClass("bgfilter");
+            $(".wrapper-about").removeClass("bgfilter");
+            $(".wrapper-slider").removeClass("bgfilter");
         });
         $("#menul2 li").hover(function () {
+            $(".mainbg").addClass("bgfilter");
+            $(".wrapper-project").addClass("bgfilter");
+            $(".wrapper-about").addClass("bgfilter");
+            $(".wrapper-slider").addClass("bgfilter");
             $(this).find(".menul2-sub:first").stop(true, true).slideDown();
         }, function () {
             $(this).find(".menul2-sub:first").stop(true, true).slideUp();
         });
-//        var $dim = $('.wrapper-all');
-//        $('#menu li').hover(function () {
-//            $dim.fadeIn(200);
-//        }, function () {
-//            $dim.fadeOut(200);
-//        });
+        $("#menul2 > li").mouseleave(function () {
+            //$("#mask-bg").remove();
+            $(".mainbg").removeClass("bgfilter");
+            $(".wrapper-project").removeClass("bgfilter");
+            $(".wrapper-about").removeClass("bgfilter");
+            $(".wrapper-slider").removeClass("bgfilter");
+        });
     }
     function mymenusub() {
         $("#menu").addClass("show-menu").find(".menu-sub").show();

@@ -1,20 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true"
-    CodeFile="about-us.aspx.cs" Inherits="about_us" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site-sub.master" AutoEventWireup="true" CodeFile="project-details.aspx.cs" Inherits="project_details" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <title>Vinhomes</title>
     <meta name="description" content="Vinhomes" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cpSite" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cpSite" Runat="Server">
     <div id="site">
         <a id="A1" href="~/" runat="server">Home <span class="glyphicon glyphicon-triangle-right"></span>
-        </a><a href="#">Giới thiệu <span class="glyphicon glyphicon-triangle-right"></span>
-        </a><span>Môi trường sống</span>
+        </a><a href="#">Dự án <span class="glyphicon glyphicon-triangle-right"></span>
+        </a><span>Dự án Vinhomes Dragon Bay</span>
     </div>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1 class="title-about">
-        Giới Thiệu</h1>
+        Giới thiệu dự án Vinhomes Dragon Bay</h1>
     <div class="wrapper-text">
         <p>
             Mỗi khu đô thị của Vinhomes đều được xây dựng trên nền tảng "Nơi cuộc sống hoà quyện
@@ -59,5 +58,6 @@
             với đầy đủ tiện ích.</p>
     </div>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphBottom" runat="Server">
+<asp:Content ID="Content4" ContentPlaceHolderID="cphBottom" Runat="Server">
 </asp:Content>
+
