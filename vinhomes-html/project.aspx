@@ -29,6 +29,7 @@
                             <a href="#">Vinhomes central park</a></h4>
                         <div class="desription">
                             Mỗi khu đô thị của Vinhomes đều được xây dựng trên nền tảng "Nơi cuộc sống hoà quyện
+                            cùng thiên nhiên" với khuôn viên cây xanh Mỗi khu đô thị của Vinhomes đều được xây dựng trên nền tảng "Nơi cuộc sống hoà quyện
                             cùng thiên nhiên" với khuôn viên cây xanh...</div>
                     </div>
                 </div>

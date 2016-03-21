@@ -198,7 +198,7 @@ body
 }
 #hotline .phone strong
 {
-    color: #b98e3b;
+    color: #e4d079;
     display: block;
     float: left;
     width: 100%;
@@ -309,23 +309,23 @@ body
     margin-left: 20px;
 }
 #menu li {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     position: relative;
 }
 #menu > li > a {
     color: #cfa54d;
     display: block;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     position: relative;
-    line-height: 43px;
+    line-height: 45px;
     text-transform: uppercase;
     text-align: center;
     background-color: #00006b;
     border-radius: 25px;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
-    border: 1px solid #ac8609
+    border: 2px solid #ac8609
 }
 #menu > li.last {
     border: none;
@@ -345,7 +345,7 @@ body
     position: absolute;
     overflow: hidden;
     white-space: nowrap;
-    width: 230px;
+    min-width: 230px;
     z-index: 99;
 }
 #menu .menu-right
@@ -358,16 +358,17 @@ body
 {
     color: #fff;
     display: block;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 43px;
+    line-height: 45px;
     text-align: center;
+    padding: 0 20px;
     text-transform: uppercase;
     border-radius: 25px;
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
      background-color: #00006b;
-    border: solid 1px #ac8609;
+    border: solid 2px #ac8609;
     position: relative;
 }
 .menu-sub .glyphicon
@@ -389,7 +390,7 @@ body
 }
 #menu .icona-right {
     position: absolute;
-    top: 35%;
+    top: 27%;
     right: 10px;
 }
 /*================menu-mobile================*/
@@ -402,7 +403,7 @@ body
     overflow: hidden;
     position: absolute;
     top: 10px;
-    left: 0;
+    right: 10px;
 }
 #hotline-mo strong
 {
@@ -412,7 +413,7 @@ body
 .button-menu
 {
     background-color: #bb913e;
-    float: right;
+    float: left;
     height: 42px;
     width: 48px;
     position: relative;
@@ -595,8 +596,8 @@ body
     position: absolute;
     width: 199px;
     z-index: 9999;
-    left: auto;
-    right: 0;
+    left: 0;
+    right: auto;
     top: 36px;
 }
 #menul2 li {
@@ -651,8 +652,8 @@ body
     white-space: nowrap;
     width: 230px;
     z-index: 99;
-    left: auto;
-    right: 100%;
+    left: 100%;
+    right: auto;
     top: 0;
 }
 .menul2-sub li a
@@ -832,6 +833,12 @@ body
     -o-filter: blur(5px);
     -moz-filter: blur(5px);
     filter: blur(5px);
+}
+.nofilter {
+    -webkit-filter: blur(0);
+    -o-filter: blur(0);
+    -moz-filter: blur(0);
+    filter: blur(0);
 }
 .wrapper-slider 
 {
@@ -1077,10 +1084,17 @@ body
     font-size: 18px;
     text-transform: capitalize;
 }
+.project-name a:hover {
+    text-decoration: none;
+}
+.project-box:hover {
+    border: 1px solid #ecde87;
+}
 .project-box .desription {
     padding: 0 20px;
     margin-bottom: 23px;
     text-align: justify;
+    overflow: hidden;
     color: #fff;
 }
 /*======================================================FOOTER===========================================*/
@@ -1347,8 +1361,14 @@ body .mobilep-right {
 {
     #menu > li > a, .menu-sub li a
     {
-        font-size: 12px;
-        line-height: 42px;
+        font-size: 16px;
+        line-height: 45px;
+    }
+    .menu-sub li a {
+        font-size: 13px;
+    }
+    #menu .icona-right {
+        top: 32%;
     }
     #footer .col-sm-6 {
         width: 100%;
@@ -1410,10 +1430,13 @@ body .mobilep-right {
 @media (min-width: 768px) and (max-width: 870px)
 {
     #menu > li > a, .menu-sub li a {
-        font-size: 11px;
-        line-height: 36px;
+        font-size: 14px;
+        line-height: 40px;
     }
-    
+    .menu-sub li a 
+    {
+        font-size: 12px;
+    }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px)
