@@ -594,7 +594,7 @@ body
     list-style: none;
     margin: 15px 0 0;
     position: absolute;
-    width: 199px;
+    width: 230px;
     z-index: 9999;
     left: 0;
     right: auto;
@@ -649,7 +649,6 @@ body
     margin: 0;
     position: absolute;
     overflow: hidden;
-    white-space: nowrap;
     width: 230px;
     z-index: 99;
     left: 100%;
@@ -1647,7 +1646,7 @@ body .mobilep-right {
     }
     #menul2 .menul2-sub {
         position: relative;
-        right: 0;
+        left: 0;
     }
     #menul2 li li a {
         text-align: left;
